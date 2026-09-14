@@ -29,7 +29,7 @@ export default function ContactSection() {
     try {
       // NOTE: Replace with your actual deployed CRM URL in production
       // e.g., https://your-crm-project.web.app/api/webhook/website
-      const CRM_WEBHOOK_URL = process.env.NEXT_PUBLIC_CRM_WEBHOOK_URL || "https://rn-pandey-insurance--rn-pandey-insurance.asia-southeast1.hosted.app/api/webhook/website";
+      const CRM_WEBHOOK_URL = "/api/webhook/website";
       
       const response = await fetch(CRM_WEBHOOK_URL, {
         method: "POST",
