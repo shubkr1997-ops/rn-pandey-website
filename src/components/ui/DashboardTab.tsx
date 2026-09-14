@@ -35,7 +35,7 @@ export default function DashboardTab() {
   ];
 
   const activePolicies = [
-    { name: "Sovereign Health Protection", id: "RNP-HLTH-88301", coverage: "₹1,50,00,000", premium: "₹2,500/mo", status: "Active", renewal: "July 24, 2026" },
+    { name: "Premium Health Protection", id: "RNP-HLTH-88301", coverage: "₹1,50,00,000", premium: "₹2,500/mo", status: "Active", renewal: "July 24, 2026" },
     { name: "Executive Motor Shield", id: "RNP-AUTO-20391", coverage: "₹25,00,000", premium: "₹1,800/mo", status: "Expires Soon", renewal: "July 08, 2026" }
   ];
 
@@ -57,7 +57,7 @@ export default function DashboardTab() {
               { label: "Active Policies", val: "2" },
               { label: "Pending Claims", val: "1" },
               { label: "Total Coverage", val: "₹1.75 Cr" },
-              { label: "Loyalty Tier", val: "Sovereign" }
+              { label: "Loyalty Tier", val: "Premium" }
             ].map((stat, idx) => (
               <div key={idx} className="p-4 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 shadow-md hover:border-brand-gold/60 transition-all duration-300">
                 <span className="text-[10px] uppercase tracking-wider text-slate-500 font-futuristic block">
@@ -237,7 +237,7 @@ export default function DashboardTab() {
                 </span>
               </div>
               <span className="text-[8px] uppercase tracking-widest text-brand-gold-dark bg-brand-gold/15 border border-brand-gold/40 px-2.5 py-0.5 rounded-full font-mono font-bold">
-                SOVEREIGN ID
+                PREMIUM ID
               </span>
             </div>
 

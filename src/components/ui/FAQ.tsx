@@ -16,8 +16,8 @@ export default function FAQ() {
       a: "Our automated AI claim verification ledger audits and clears Standard Health Claims in under 10 minutes. For major incidents requiring local inspections, a drone report or IoT field validation is finalized within 4 hours."
     },
     {
-      q: "What benefits does the Sovereign VIP Tier offer?",
-      a: "Sovereign Tier cardholders enjoy 100% cashless medical settlements internationally, direct 24/7 access to executive medical suites, luxury replacement vehicles during auto claims, and dedicated legal representation for wealth audits."
+      q: "What benefits does the Premium VIP Tier offer?",
+      a: "Premium Tier cardholders enjoy 100% cashless medical settlements internationally, direct 24/7 access to executive medical suites, luxury replacement vehicles during auto claims, and dedicated legal representation for wealth audits."
     },
     {
       q: "Are electric vehicles covered under Motor Insurance?",

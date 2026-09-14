@@ -24,7 +24,7 @@ export default function Testimonials() {
     {
       name: "Dr. Ananya Sharma",
       role: "Director, LifeCare Clinics",
-      comment: "The health protection plan is truly sovereign tier. Direct international admission assistance and cashless processing makes medical emergencies completely worry-free.",
+      comment: "The health protection plan is truly premium tier. Direct international admission assistance and cashless processing makes medical emergencies completely worry-free.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80"
     },

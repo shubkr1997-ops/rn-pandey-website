@@ -10,7 +10,7 @@ export default function WhatsAppButton() {
 
   return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center space-x-3 pointer-events-auto">
-      {/* Sovereign Luxury Floating Badge Tooltip */}
+      {/* Premium Luxury Floating Badge Tooltip */}
       <AnimatePresence>
         {isHovered && (
           <motion.a

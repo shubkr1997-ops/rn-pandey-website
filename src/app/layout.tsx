@@ -5,12 +5,12 @@ import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rnpandeyinsurance.com"),
-  title: "R N Pandey Insurance | Sovereign Asset Protection & Wealth Security",
+  title: "R N Pandey Insurance | Premium Asset Protection & Wealth Security",
   description: "Experience elite-tier asset protection, automated AI claim settlement ledger checks, comprehensive health coverages, and customized luxury policy options. Crafted for premium security.",
-  keywords: "R N Pandey Insurance, RN Pandey, Premium Insurance, Luxury Asset Defense, AI Claim Settlement, Wealth Security, Sovereign Cover",
+  keywords: "R N Pandey Insurance, RN Pandey, Premium Insurance, Luxury Asset Defense, AI Claim Settlement, Wealth Security, Premium Cover",
   authors: [{ name: "R N Pandey" }],
   openGraph: {
-    title: "R N Pandey Insurance | Sovereign Asset Protection",
+    title: "R N Pandey Insurance | Premium Asset Protection",
     description: "Elite-tier asset protection, automated AI claim settlement ledger checks, and customized luxury policy options.",
     url: "https://rnpandeyinsurance.com",
     siteName: "R N Pandey Insurance",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "R N Pandey Insurance | Sovereign Asset Protection",
+    title: "R N Pandey Insurance | Premium Asset Protection",
     description: "Elite-tier asset protection, automated AI claim settlement ledger checks, and customized luxury policy options.",
     images: ["/hero-person.png"],
   },

@@ -125,7 +125,7 @@ export default function PersistentBackgroundVideo() {
     >
       {/* 
         Video elements container.
-        Rich opacity on dark navy for the original sovereign luxury aesthetic.
+        Rich opacity on dark navy for the original premium luxury aesthetic.
       */}
       <div className="absolute inset-0 w-full h-full opacity-60 pointer-events-none">
         {/* Buffer Video 1 */}

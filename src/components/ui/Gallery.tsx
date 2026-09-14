@@ -1,50 +1,76 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Camera, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-    alt: "Client Meeting",
-    caption: "Executive Client Consultations",
+    src: "/gallery/WhatsApp Image 2026-09-14 at 1.20.03 PM.jpeg",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
   },
   {
-    src: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop",
-    alt: "Handshake Deal",
-    caption: "Trusted Partnership Signings",
+    src: "/gallery/WhatsApp Image 2026-09-14 at 1.20.04 PM (1).jpeg",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
   },
   {
-    src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop",
-    alt: "Modern Office",
-    caption: "Our Premium Corporate Office",
+    src: "/gallery/WhatsApp Image 2026-09-14 at 1.20.04 PM (2).jpeg",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
   },
   {
-    src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop",
-    alt: "Team Planning",
-    caption: "Strategic Planning Sessions",
+    src: "/gallery/WhatsApp Image 2026-09-14 at 1.20.04 PM (3).jpeg",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
   },
   {
-    src: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
-    alt: "Award Ceremony",
-    caption: "Industry Recognition Awards",
+    src: "/gallery/WhatsApp Image 2026-09-14 at 1.20.04 PM.jpeg",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
   },
   {
-    src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop",
-    alt: "Team Collaboration",
-    caption: "Expert Team Collaboration",
+    src: "/gallery/WhatsApp Image 2026-09-14 at 1.20.05 PM.jpeg",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
   },
   {
-    src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop",
-    alt: "Presentation",
-    caption: "Corporate Presentations",
+    src: "/gallery/Pasted image.png",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
   },
   {
-    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop",
-    alt: "Office Interior",
-    caption: "World-Class Workspace",
+    src: "/gallery/Pasted image (2).png",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
   },
+  {
+    src: "/gallery/Pasted image (3).png",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
+  },
+  {
+    src: "/gallery/Pasted image (4).png",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
+  },
+  {
+    src: "/gallery/Pasted image (5).png",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
+  },
+  {
+    src: "/gallery/Pasted image (6).png",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
+  },
+  {
+    src: "/gallery/Pasted image (7).png",
+    alt: "RN Pandey Gallery",
+    caption: "RN Pandey Updates",
+  }
 ];
 
 export default function Gallery() {
@@ -98,7 +124,7 @@ export default function Gallery() {
           {/* Description */}
           <p className="text-sm md:text-base lg:text-lg text-slate-500 font-futuristic mt-4 max-w-2xl mx-auto leading-relaxed">
             Moments that define <span className="text-brand-navy-darkest font-bold">excellence</span> — a glimpse into our legacy of 
-            <span className="text-brand-gold-dark font-bold"> trust</span> and sovereign service.
+            <span className="text-brand-gold-dark font-bold"> trust</span> and premium service.
           </p>
 
           {/* Decorative Divider with side lines */}
@@ -124,10 +150,11 @@ export default function Gallery() {
               className="group relative cursor-pointer rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-brand-gold/40 transition-all duration-500"
             >
               {/* Image */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
+                width={600}
+                height={400}
                 className="w-full h-48 md:h-52 object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
@@ -195,13 +222,11 @@ export default function Gallery() {
               className="max-w-4xl w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={galleryImages[selectedImage].src.replace(
-                  "w=600&h=400",
-                  "w=1200&h=800"
-                )}
+              <Image
+                src={galleryImages[selectedImage].src}
                 alt={galleryImages[selectedImage].alt}
+                width={1200}
+                height={800}
                 className="w-full h-auto max-h-[75vh] object-contain rounded-2xl shadow-2xl"
               />
               <div className="text-center mt-5">

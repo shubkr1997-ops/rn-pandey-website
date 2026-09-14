@@ -13,14 +13,47 @@ export default function ContactSection() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name || !form.email) return;
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setForm({ name: "", email: "", phone: "", subject: "Premium Quote", message: "" });
-    }, 4000);
+    if (!form.name || !form.email || !form.phone) {
+      setError("Please fill in name, email, and phone.");
+      return;
+    }
+    
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      // NOTE: Replace with your actual deployed CRM URL in production
+      // e.g., https://your-crm-project.web.app/api/webhook/website
+      const CRM_WEBHOOK_URL = process.env.NEXT_PUBLIC_CRM_WEBHOOK_URL || "http://localhost:3001/api/webhook/website";
+      
+      const response = await fetch(CRM_WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setForm({ name: "", email: "", phone: "", subject: "Premium Quote", message: "" });
+      }, 4000);
+    } catch (err) {
+      console.error(err);
+      setError("Something went wrong. Please try again or contact us on WhatsApp.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -35,7 +68,7 @@ export default function ContactSection() {
             Get In Touch
           </span>
           <h2 className="font-luxury text-3xl md:text-5xl font-bold mt-2 text-brand-navy-darkest">
-            Contact <span className="text-brand-gold-dark">Sovereign Agent.</span>
+            Contact <span className="text-brand-gold-dark">Premium Agent.</span>
           </h2>
           <div className="w-24 h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mt-4" />
         </div>
@@ -226,6 +259,12 @@ export default function ContactSection() {
                 />
               </div>
 
+              {error && (
+                <div className="text-red-500 text-xs font-bold text-center mt-2">
+                  {error}
+                </div>
+              )}
+
               {submitted ? (
                 <div className="mt-auto py-4 px-6 rounded-xl bg-green-500/10 border border-green-500/20 text-green-600 flex items-center justify-center space-x-2 animate-pulse text-sm font-bold">
                   <ShieldCheck className="w-5 h-5" />
@@ -234,9 +273,10 @@ export default function ContactSection() {
               ) : (
                 <button
                   type="submit"
-                  className="mt-auto w-full py-4 rounded-xl text-xs uppercase tracking-[0.2em] font-black text-white bg-brand-navy-darkest hover:bg-brand-gold-dark hover:text-brand-navy-darkest shadow-md hover:scale-[1.01] transition-all duration-300 flex items-center justify-center space-x-2"
+                  disabled={isSubmitting}
+                  className={`mt-auto w-full py-4 rounded-xl text-xs uppercase tracking-[0.2em] font-black text-white bg-brand-navy-darkest hover:bg-brand-gold-dark hover:text-brand-navy-darkest shadow-md hover:scale-[1.01] transition-all duration-300 flex items-center justify-center space-x-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
-                  <span>Transmit Inquiry Request</span>
+                  <span>{isSubmitting ? 'Transmitting...' : 'Transmit Inquiry Request'}</span>
                   <Send className="w-4 h-4" />
                 </button>
               )}

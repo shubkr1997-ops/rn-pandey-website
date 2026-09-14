@@ -1,0 +1,3 @@
+allowBuilds:
+  '*': true
+  unrs-resolver: true

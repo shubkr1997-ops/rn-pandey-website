@@ -7,10 +7,9 @@ import { Shield, Menu, X, ArrowUpRight, User } from "lucide-react";
 interface NavbarProps {
   onNavClick?: (section: string) => void;
   activeSection?: string;
-  onDashboardClick?: () => void;
 }
 
-export default function Navbar({ onNavClick, activeSection = "home", onDashboardClick }: NavbarProps) {
+export default function Navbar({ onNavClick, activeSection = "home" }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -66,7 +65,7 @@ export default function Navbar({ onNavClick, activeSection = "home", onDashboard
               R N PANDEY
             </span>
             <span className="text-[9px] uppercase tracking-[0.3em] text-white/60 -mt-0.5 font-futuristic font-extrabold group-hover:text-white/80">
-              Sovereign Wealth & Insurance
+              Wealth & Insurance
             </span>
           </div>
         </Link>
@@ -93,13 +92,6 @@ export default function Navbar({ onNavClick, activeSection = "home", onDashboard
 
         {/* Action Buttons - Bold & Clean */}
         <div className="hidden lg:flex items-center space-x-4">
-          <button
-            onClick={onDashboardClick}
-            className="flex items-center space-x-2 text-xs uppercase tracking-[0.2em] font-extrabold text-white border border-white/20 bg-white/10 hover:bg-white/20 hover:border-brand-gold px-4 py-2 rounded-lg transition-all duration-300 shadow-sm"
-          >
-            <User className="w-3.5 h-3.5 text-brand-gold" />
-            <span>Dashboard</span>
-          </button>
           <button
             onClick={() => handleItemClick("contact")}
             className="flex items-center space-x-1.5 text-xs uppercase tracking-[0.2em] font-black text-brand-navy-darkest bg-brand-gold hover:bg-brand-gold-dark px-5 py-2.5 rounded-lg shadow-sm transition-all duration-300 hover:scale-105"
@@ -138,16 +130,6 @@ export default function Navbar({ onNavClick, activeSection = "home", onDashboard
             </button>
           ))}
           <div className="flex flex-col space-y-4 pt-6">
-            <button
-              onClick={() => {
-                setIsOpen(false);
-                if (onDashboardClick) onDashboardClick();
-              }}
-              className="flex items-center justify-center space-x-2 text-sm uppercase tracking-wider font-extrabold text-white border border-white/20 bg-white/10 px-6 py-3 rounded-lg hover:border-brand-gold transition-all duration-300 w-full"
-            >
-              <User className="w-4 h-4" />
-              <span>Client Dashboard</span>
-            </button>
             <button
               onClick={() => handleItemClick("contact")}
               className="flex items-center justify-center space-x-1.5 text-sm uppercase tracking-wider font-black text-brand-navy-darkest bg-brand-gold hover:bg-brand-gold-dark px-6 py-3 rounded-lg shadow-sm w-full"
