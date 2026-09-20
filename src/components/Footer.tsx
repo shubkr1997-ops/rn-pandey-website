@@ -134,7 +134,7 @@ export default function Footer({ onNavClick }: FooterProps) {
             &copy; {new Date().getFullYear()} R N Pandey Insurance. All Rights Reserved. Crafted for premium security.
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-            <a href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</a>
+            <a href="/privacy" className="hover:text-white transition-colors duration-300">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors duration-300">Terms & Conditions</a>
             <a href="#" className="hover:text-white transition-colors duration-300">Disclaimer</a>
           </div>
