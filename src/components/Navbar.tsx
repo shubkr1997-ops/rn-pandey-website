@@ -92,13 +92,15 @@ export default function Navbar({ onNavClick, activeSection = "home" }: NavbarPro
 
         {/* Action Buttons - Bold & Clean */}
         <div className="hidden lg:flex items-center space-x-4">
-          <button
-            onClick={() => handleItemClick("contact")}
+          <a
+            href="https://wa.me/919341501312?text=Hello%20R.N.%20Pandey%20Insurance!%20I%20would%20like%20to%20get%20a%20free%20insurance%20quote."
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center space-x-1.5 text-xs uppercase tracking-[0.2em] font-black text-brand-navy-darkest bg-brand-gold hover:bg-brand-gold-dark px-5 py-2.5 rounded-lg shadow-sm transition-all duration-300 hover:scale-105"
           >
             <span>Get Quote</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -130,13 +132,16 @@ export default function Navbar({ onNavClick, activeSection = "home" }: NavbarPro
             </button>
           ))}
           <div className="flex flex-col space-y-4 pt-6">
-            <button
-              onClick={() => handleItemClick("contact")}
+            <a
+              href="https://wa.me/919341501312?text=Hello%20R.N.%20Pandey%20Insurance!%20I%20would%20like%20to%20get%20a%20free%20insurance%20quote."
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
               className="flex items-center justify-center space-x-1.5 text-sm uppercase tracking-wider font-black text-brand-navy-darkest bg-brand-gold hover:bg-brand-gold-dark px-6 py-3 rounded-lg shadow-sm w-full"
             >
               <span>Get Free Quote</span>
               <ArrowUpRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

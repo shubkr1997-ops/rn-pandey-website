@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
   const whatsappUrl =
-    "https://wa.me/919934516400?text=Hello%20R%20N%20Pandey%20Insurance%2C%20I%20would%20like%20to%20inquire%20about%20your%20insurance%20policies.";
+    "https://wa.me/919341501312?text=Hello%20R.N.%20Pandey%20Insurance!%20I%20visited%20your%20website%20and%20would%20like%20to%20get%20an%20insurance%20quote.";
 
   return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center space-x-3 pointer-events-auto">
@@ -26,7 +26,7 @@ export default function WhatsAppButton() {
             <div className="flex items-center space-x-1.5">
               <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
               <span className="text-[10px] uppercase tracking-widest text-[#25D366] font-bold font-futuristic">
-                Online 24/7
+                AI Agent 24/7
               </span>
             </div>
             <span className="text-white/30 text-xs">|</span>

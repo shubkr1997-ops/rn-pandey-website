@@ -103,9 +103,7 @@ export default function ContactSection() {
                   <div className="space-y-1">
                     <span className="text-[10px] text-brand-gold-dark uppercase tracking-widest font-extrabold block">Phone support</span>
                     <a
-                      href="https://wa.me/919934516400?text=Hello%20R%20N%20Pandey%20Insurance%2C%20I%20would%20like%20to%20inquire%20about%20your%20insurance%20policies."
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="tel:+919934516400"
                       className="text-slate-700 font-bold hover:text-brand-gold-dark transition-colors duration-300 block"
                     >
                       +91 99345 16400
@@ -118,14 +116,14 @@ export default function ContactSection() {
                     <MessageSquare className="w-4 h-4" />
                   </div>
                   <div className="space-y-1">
-                    <span className="text-[10px] text-brand-gold-dark uppercase tracking-widest font-extrabold block">WhatsApp Concierge</span>
+                    <span className="text-[10px] text-brand-gold-dark uppercase tracking-widest font-extrabold block">WhatsApp Concierge (AI 24/7)</span>
                     <a
-                      href="https://wa.me/919934516400?text=Hello%20R%20N%20Pandey%20Insurance%2C%20I%20would%20like%20to%20inquire%20about%20your%20insurance%20policies."
+                      href="https://wa.me/919341501312?text=Hello%20R.N.%20Pandey%20Insurance!%20I%20would%20like%20to%20inquire%20about%20your%20insurance%20policies."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-slate-700 font-bold hover:text-brand-gold-dark transition-colors duration-300 block"
                     >
-                      +91 99345 16400
+                      +91 93415 01312
                     </a>
                   </div>
                 </div>

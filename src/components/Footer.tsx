@@ -80,7 +80,7 @@ export default function Footer({ onNavClick }: FooterProps) {
                       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.967C16.58 1.974 14.107.95 11.49.95c-5.438 0-9.863 4.373-9.867 9.801-.001 1.73.461 3.414 1.336 4.931L1.946 22.1l6.701-1.946z" />
                     </svg>
                   ),
-                  url: "https://wa.me/919934516400?text=Hello%20R%20N%20Pandey%20Insurance%2C%20I%20would%20like%20to%20inquire%20about%20your%20insurance%20policies."
+                  url: "https://wa.me/919341501312?text=Hello%20R.N.%20Pandey%20Insurance!%20I%20would%20like%20to%20inquire%20about%20your%20insurance%20policies."
                 }
               ].map((social, index) => (
                 <a

@@ -10,6 +10,7 @@ interface Category {
   subtitle: string;
   desc: string;
   cta: string;
+  whatsappMessage: string;
   icon: React.ReactNode;
 }
 
@@ -20,6 +21,7 @@ const categories: Category[] = [
     subtitle: "Two-Wheeler Protection",
     desc: "Zero-gap road shield with instant claims settlement. Covers all premium superbikes, scooters & cruisers across India.",
     cta: "Get Bike Cover",
+    whatsappMessage: "Hello R.N. Pandey Insurance! I am interested in Bike Insurance for my two-wheeler. Please share quote details.",
     icon: <Bike className="w-6 h-6 md:w-7 md:h-7" />,
   },
   {
@@ -28,6 +30,7 @@ const categories: Category[] = [
     subtitle: "Four-Wheeler Protection",
     desc: "Zero-depreciation. Nationwide cashless repairs. Luxury replacement vehicles. Comprehensive or third-party options.",
     cta: "Get Car Cover",
+    whatsappMessage: "Hello R.N. Pandey Insurance! I am interested in Car Insurance for my four-wheeler. Please share quote details.",
     icon: <Car className="w-6 h-6 md:w-7 md:h-7" />,
   },
   {
@@ -36,6 +39,7 @@ const categories: Category[] = [
     subtitle: "Commercial Vehicle Cover",
     desc: "Comprehensive coverage for trucks, taxis & fleet transport. Protects against third-party liability, transit damage & downtime.",
     cta: "Get Commercial Cover",
+    whatsappMessage: "Hello R.N. Pandey Insurance! I am interested in Commercial Fleet / Vehicle Insurance. Please share quote details.",
     icon: <Truck className="w-6 h-6 md:w-7 md:h-7" />,
   },
 ];
@@ -72,8 +76,11 @@ export default function CategoryCardGrid() {
         {/* ── Coverage Tabs ── */}
         <div className="pb-12 space-y-4">
           {categories.map((cat) => (
-            <div
+            <a
               key={cat.index}
+              href={`https://wa.me/919341501312?text=${encodeURIComponent(cat.whatsappMessage)}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group grid grid-cols-1 md:grid-cols-12 gap-5 items-center px-6 py-5 md:py-6 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-200/80 hover:border-brand-gold/60 transition-all duration-300 cursor-pointer shadow-md hover:shadow-xl"
             >
               {/* Column 1: Category Icon & Title (4 cols out of 12) */}
@@ -105,7 +112,7 @@ export default function CategoryCardGrid() {
                   <ArrowUpRight className="w-4 h-4 stroke-[2.5] shrink-0" />
                 </span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
